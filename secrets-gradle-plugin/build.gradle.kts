@@ -1,4 +1,5 @@
-// Copyright 2021 Google LLC
+// Copyright 2022 Moshe Katz
+// Based on work Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -55,8 +56,8 @@ publishing {
                 url.set(PluginInfo.url)
 
                 scm {
-                    connection.set("scm:git@github.com:google/secrets-gradle-plugin.git")
-                    developerConnection.set("scm:git@github.com:google/secrets-gradle-plugin.git")
+                    connection.set("scm:git@github.com:kohenkatz/dotenv-gradle-plugin.git")
+                    developerConnection.set("scm:git@github.com:kohenkatz/dotenv-gradle-plugin.git")
                     url.set(PluginInfo.url)
                 }
 
@@ -68,15 +69,9 @@ publishing {
                     }
                 }
 
-                organization {
-                    name.set("Google Inc.")
-                    url.set("https://developers.google.com/maps")
-                }
-
-
                 developers {
                     developer {
-                        name.set("Google Inc.")
+                        name.set("Moshe Katz")
                     }
                 }
             }
@@ -91,19 +86,19 @@ publishing {
     }
 }
 
-project(":secrets-gradle-plugin") {
+project(":dotenv-gradle-plugin") {
     version = PluginInfo.version
 }
 
 object PluginInfo {
     const val artifactId =
-        "com.google.android.libraries.mapsplatform.secrets-gradle-plugin.gradle.plugin"
-    const val description = "A Gradle plugin for providing secrets securely to an Android project."
-    const val displayName = "Secrets Gradle Plugin for Android"
-    const val group = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin"
+        "net.ymkatz.dotenv-gradle-plugin.gradle.plugin"
+    const val description = "A Gradle plugin for providing Environment Variables (including `.env`) to an Android project."
+    const val displayName = "DotEnv Gradle Plugin for Android"
+    const val group = "net.ymkatz.dotenv-gradle-plugin"
     const val implementationClass =
-        "com.google.android.libraries.mapsplatform.secrets_gradle_plugin.SecretsPlugin"
-    const val name = "secretsGradlePlugin"
-    const val url = "https://github.com/google/secrets-gradle-plugin"
-    const val version = "2.0.1"
+        "net.ymkatz.dotenv_gradle_plugin.DotenvPlugin"
+    const val name = "dotenvGradlePlugin"
+    const val url = "https://github.com/kohenkatz/dotenv-gradle-plugin"
+    const val version = "0.1.0"
 }

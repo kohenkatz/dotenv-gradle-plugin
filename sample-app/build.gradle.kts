@@ -17,7 +17,7 @@ plugins {
     id("kotlin-android")
 
     // 1. Include the plugin
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("net.ymkatz.dotenv-gradle-plugin")
 }
 
 android {
@@ -25,7 +25,7 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "com.google.secrets_plugin.sample"
+        applicationId = "net.ymkatz.dotenv_plugin.sample"
         minSdk = 21
         targetSdk = 32
         versionCode = 1
